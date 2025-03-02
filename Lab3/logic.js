@@ -4,7 +4,7 @@ let darkMode;
 let translations;
 let languageSelect;
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function () {
     themeButton = document.querySelector('#theme-toggle');
     lightMode = document.querySelector('#mode-light');
     darkMode = document.querySelector('#mode-dark');
@@ -13,9 +13,9 @@ window.addEventListener('DOMContentLoaded', function() {
     checkDarkMode();
     themeButton.addEventListener('click', () => {
         const darkModeStatus = getFromLocalStorage('darkMode') === 'true';
-    
+
         saveIntoLocalStorage('darkMode', !darkModeStatus);
-        switchDarkModeButton(!darkModeStatus);    
+        switchDarkModeButton(!darkModeStatus);
     })
 
     fetch('./lang.json')
