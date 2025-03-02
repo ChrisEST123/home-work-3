@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Commerce Demo - Products</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script type="module" src="./logic.js"></script>
   <script src="fetch.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1>E-Commerce Demo</h1>
@@ -27,11 +31,11 @@
         <button id="theme-toggle">
           <i id="mode-light" class="fa-regular fa-sun"></i>
           <i id="mode-dark" class="fa-solid fa-moon"></i>
-        </button>  
+        </button>
       </div>
     </nav>
   </header>
-    
+
   <main>
     <section class="filters">
       <h2>Products</h2>
@@ -64,10 +68,17 @@
       </div>
       <!-- Add more cards as needed -->
     </section>
+
+    <section class="pagination">
+      <button id="prev-page">Previous</button>
+      <span id="page-info">Page 1 of X</span>
+      <button id="next-page">Next</button>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Development of Interactive Systems Course.</p>
   </footer>
 </body>
+
 </html>
