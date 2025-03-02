@@ -43,6 +43,18 @@ function updatePaginationControls() {
   document.getElementById('next-page').disabled = (currentPage === totalPages);
 }
 
+
+//sorting logic
+function sortProducts(sortOrder) {
+  if (sortOrder === 'price-low') {
+    products.sort((a, b) => a.price - b.price);
+  } else if (sortOrder === 'price-high') {
+    products.sort((a, b) => b.price - a.price);
+  }
+  renderProducts();
+}
+
+
 // Attach event listeners once DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('prev-page').addEventListener('click', () => {
@@ -61,6 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
       updatePaginationControls();
     }
   });
+
+  //sorting event listener
+  const priceSortSelect = document.getElementById('price-sort');
+  if (priceSortSelect) {
+    priceSortSelect.addEventListener('change', (event) => {
+      sortProducts(event.target.value);
+    });
+  }
 
   // Initial load
   fetchProducts();
